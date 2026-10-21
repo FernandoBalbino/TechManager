@@ -2,6 +2,8 @@
 
 Central de suporte colaborativa para aulas de informática. O professor cria a sala; os alunos assumem chamados e resolvem problemas em computadores simulados independentes.
 
+**[Abrir o TechManager](https://fernandobalbino.github.io/TechManager/)** · [Código no GitHub](https://github.com/FernandoBalbino/TechManager)
+
 ## Usar na aula
 
 1. Abra o site, selecione **Sou professor**, informe seu nome e crie a sala.

@@ -1,0 +1,26 @@
+{
+  "note": "WebSocket payload bytes, excludes connection/TLS overhead. Teacher HTTP capture began during preparation; not billing metrics.",
+  "traffic": {
+    "teacher": {
+      "received": 11089,
+      "sent": 279,
+      "observedHttpBytes": 2997,
+      "responses": 6,
+      "truncated": false
+    },
+    "student": {
+      "received": 5736,
+      "sent": 433,
+      "observedHttpBytes": 0,
+      "responses": 0,
+      "truncated": false
+    },
+    "helper": {
+      "received": 5227,
+      "sent": 296,
+      "observedHttpBytes": 0,
+      "responses": 0,
+      "truncated": false
+    }
+  }
+}
