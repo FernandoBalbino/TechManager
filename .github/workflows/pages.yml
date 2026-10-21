@@ -27,6 +27,7 @@ jobs:
       - name: Check backend configuration
         run: test -n "$VITE_REALTIME_URL"
       - run: npm run build
+      - run: npm run test:sites
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

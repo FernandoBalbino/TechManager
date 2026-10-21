@@ -5,7 +5,7 @@
   font-synthesis: none;
   font-weight: 400;
   --blue: #0668ff;
-  --coral: #ff5359;
+  --coral: #d93444;
   --green: #08ba88;
   --muted: #65779b;
   --line: #e5eef9;
@@ -103,7 +103,7 @@ small,
   color: white;
 }
 .coral:hover:not(:disabled) {
-  background: #f13b46;
+  background: #c5283a;
 }
 .secondary {
   background: white;
@@ -352,20 +352,20 @@ small,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #7c90b1;
+  color: #60759a;
   font-size: 10px;
   margin-bottom: 9px;
 }
 .ticket-card h3 {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: -0.28px;
   line-height: 1.38;
   font-weight: 700;
   margin-bottom: 6px;
 }
 .ticket-description {
-  color: #667b9e;
-  font-size: 12px;
+  color: #5d7194;
+  font-size: 13px;
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -415,7 +415,7 @@ small,
   gap: 6px;
   align-items: center;
   font-size: 11px;
-  color: #667b9e;
+  color: #5d7194;
   margin: 0 0 11px;
 }
 .ticket-owner.mine {
@@ -435,7 +435,7 @@ small,
   align-items: center;
   padding: 5px 9px;
   border-radius: 15px;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1;
   white-space: nowrap;
 }
@@ -448,7 +448,7 @@ small,
   background: #fff5df;
 }
 .level-3 {
-  color: #e33448;
+  color: #c3263b;
   background: #ffe8e9;
 }
 .priority.normal {
@@ -458,7 +458,7 @@ small,
 .priority.alta,
 .priority.urgente {
   background: #ffe6e8;
-  color: #ed3849;
+  color: #c3263b;
 }
 .duo {
   color: #0873ff;
@@ -474,7 +474,7 @@ small,
   margin: 5px 0 11px;
 }
 .deadline.urgent {
-  color: #ed3545;
+  color: #c3263b;
 }
 .card-button {
   width: 100%;
@@ -567,7 +567,7 @@ small,
 }
 .ranking-row strong {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -575,7 +575,7 @@ small,
 }
 .ranking-row small {
   display: block;
-  font-size: 9px;
+  font-size: 10px;
   margin-top: 5px;
   white-space: nowrap;
 }
@@ -647,7 +647,7 @@ small,
   color: var(--blue);
 }
 .scoring p {
-  font-size: 13px;
+  font-size: 14px;
   color: #5275af;
   line-height: 1.7;
 }
@@ -795,7 +795,7 @@ small,
   display: flex;
   gap: 4px;
   font-size: 12px;
-  color: #f05b63;
+  color: #c3263b;
 }
 .chat-tabs {
   display: flex;
@@ -919,7 +919,7 @@ small,
   justify-content: center;
   gap: 5px;
   font-size: 9px;
-  color: #8a9ab4;
+  color: #65779b;
   padding: 8px;
   flex-shrink: 0;
 }
