@@ -1,0 +1,35 @@
+{
+  "name": "techmanager",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:client": "vite",
+    "start": "node server/index.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "vite build && node scripts/prepare-sites-build.mjs",
+    "preview": "vite preview",
+    "test:sites": "node --test tests/sites-worker.test.mjs",
+    "prebuild": "node scripts/prepare-offline.mjs",
+    "predev": "node scripts/prepare-offline.mjs",
+    "format": "prettier --write src server shared/catalog.mjs shared/validators.mjs tests scripts/*.mjs .github/workflows/pages.yml"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "@fontsource/inter": "^5.2.8",
+    "@phosphor-icons/react": "^2.1.10",
+    "@vitejs/plugin-react": "5.0.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "socket.io-client": "^4.8.1",
+    "vite": "6.4.2"
+  },
+  "engines": {
+    "node": ">=22 <25"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "techmanager-realtime",
+  "repo": "https://github.com/FernandoBalbino/TechManager",
+  "branch": "main",
+  "runtime": "node",
+  "region": "virginia",
+  "plan": "free",
+  "autoDeploy": "yes",
+  "buildCommand": "npm ci --omit=dev --ignore-scripts --no-audit --no-fund",
+  "startCommand": "node server/index.mjs",
+  "envVars": [
+    { "key": "NODE_ENV", "value": "production" },
+    { "key": "ALLOWED_ORIGINS", "value": "https://fernandobalbino.github.io" }
+  ]
+}

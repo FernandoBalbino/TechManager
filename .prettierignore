@@ -1,0 +1,6 @@
+public/windows/
+shared/legacy/
+scripts/prepare-sites-build.mjs
+tests/sites-worker.test.mjs
+dist/
+node_modules/
