@@ -20,9 +20,25 @@ export async function prepareEnvironment(progress) {
       }
     }),
   );
-  if ("serviceWorker" in navigator && import.meta.env.PROD)
-    await navigator.serviceWorker.register(base + "service-worker.js", {
-      scope: base,
-    });
+  if ("serviceWorker" in navigator && import.meta.env.PROD) {
+    const registration = await navigator.serviceWorker.register(
+      base + "service-worker.js",
+      {
+        scope: base,
+      },
+    );
+    await navigator.serviceWorker.ready;
+    (
+      registration.active ||
+      registration.waiting ||
+      registration.installing
+    )?.postMessage({ type: "TECHMANAGER_MANIFEST", manifest });
+  }
+  const oldCaches = (await caches.keys()).filter(
+    (key) =>
+      key.startsWith("techmanager-assets-") &&
+      key !== "techmanager-assets-" + manifest.version,
+  );
+  await Promise.all(oldCaches.map((key) => caches.delete(key)));
   return manifest.bytes;
 }

@@ -17,6 +17,7 @@ async function walk(folder) {
 }
 await walk("public/windows");
 await walk("public/assets");
+files.push("windows/index.html");
 files.sort();
 const hash = createHash("sha256");
 let bytes = 0;
@@ -24,8 +25,6 @@ for (const file of files) {
   hash.update(await readFile("public/" + file));
   bytes += (await stat("public/" + file)).size;
 }
-files.push("windows/index.html");
-bytes += (await stat("public/windows/index.html")).size;
 await writeFile(
   "public/offline-manifest.json",
   JSON.stringify({ version: hash.digest("hex").slice(0, 12), bytes, files }),
