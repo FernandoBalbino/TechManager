@@ -558,8 +558,8 @@ export function TeacherOptions({ state, act, exportRoom, onClose }) {
         <ConfigFields config={config} setConfig={setConfig} />
       )}
       <p className="muted">
-        No início: um chamado por aluno presente. Depois: um novo chamado
-        compartilhado a cada 60 segundos.
+        No início: um chamado por aluno presente. Depois: três novos chamados
+        compartilhados a cada 60 segundos.
       </p>
       <div className="teacher-actions">
         {state.status === "lobby" && (

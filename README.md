@@ -16,7 +16,7 @@ Central de suporte colaborativa para aulas de informática. O professor cria a s
 
 ## Regras
 
-- Início: um chamado por aluno online. Depois: **um chamado compartilhado a cada 60 segundos**.
+- Início: um chamado por aluno online. Depois: **três chamados compartilhados a cada 60 segundos**.
 - 50 tipos de cenário, sorteados sem repetição por ciclo. Cada reaparecimento cria um atendimento independente.
 - Até dois chamados próprios e uma ajuda. Apenas um Windows fica ativo; a troca salva o PC e a conversa em IndexedDB.
 - Prazos desde a entrada na fila: fácil 5, médio 8, difícil 12 minutos. O professor pode mudar antes de iniciar.

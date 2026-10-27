@@ -2,6 +2,8 @@
 
 ## TechManager decisions
 
+Ticket arrivals: keep one initial ticket per online student; then release three shared tickets together every 60 seconds of active room time. Pausing freezes arrivals and deadlines.
+
 Classroom introduction: `/slide/` is a standalone lesson before creating a room, matching OSLINUX and Aula-TCP-UDP (white, #3012b5 purple, #ff603d orange, Barlow Condensed titles and Inter text). Use real local platform screenshots, controllable animations and clickable demonstrations. Keep navigation visible on TV 1920×1080 and Chromebook 1366×768. The lesson must not open sockets, create rooms or change real classroom progress. Keep a final link to the existing lobby and a presentation link in the lobby; preserve the student board design.
 
 Approved reference: `design/approved.png`. Use light mode, Inter, cobalt blue and coral, left navigation, three Kanban columns (Novos / Em atendimento / Resolvidos), ranking at right. Top contains only online students, time remaining and next-ticket countdown. Never add a logo, project name or room code to the student board header. Target Chromebook 1366×768; client chat collapses during Windows operation.

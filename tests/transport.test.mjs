@@ -71,9 +71,16 @@ test("professor + 15 sockets locais: disputa atômica, alterações incrementais
   app.engine.tick();
   assert.equal(app.engine.room(created.code).tickets.length, 15);
   await send(teacher, "room:resume");
+  const arrivals = new Promise((resolve) =>
+    teacher.once("room:patch", resolve),
+  );
   now += 60000;
   app.engine.tick();
-  assert.equal(app.engine.room(created.code).tickets.length, 16);
+  assert.equal(app.engine.room(created.code).tickets.length, 18);
+  const arrivalPatch = await arrivals;
+  assert.equal(arrivalPatch.tickets.length, 3);
+  assert.ok(arrivalPatch.tickets.every((ticket) => ticket.createdAt === 60000));
+  assert.equal(arrivalPatch.nextArrivalAt, 120000);
   await send(teacher, "room:end");
   assert.equal((await send(teacher, "room:sync")).data.status, "ended");
   console.log(

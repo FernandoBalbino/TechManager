@@ -268,7 +268,7 @@ export class GameEngine {
       return;
     }
     while (elapsed >= room.nextArrivalAt) {
-      this.addTicket(room, room.nextArrivalAt);
+      for (let i = 0; i < 3; i++) this.addTicket(room, room.nextArrivalAt);
       room.nextArrivalAt += 60000;
       changed = true;
     }

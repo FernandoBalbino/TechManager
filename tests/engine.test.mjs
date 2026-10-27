@@ -26,27 +26,42 @@ const proof = {
   clientConfirmed: true,
   summary: "Corrigi e conferi o resultado com o cliente.",
 };
-test("15 alunos: lote inicial, 60s compartilhados e pausa congelam o relógio", () => {
+test("15 alunos: lote inicial, três chamados a cada 60s e pausa congelam o relógio", () => {
   const f = fixture();
   assert.equal(f.room.tickets.length, 15);
   f.advance(59999);
   assert.equal(f.room.tickets.length, 15);
   f.advance(1);
-  assert.equal(f.room.tickets.length, 16);
+  assert.equal(f.room.tickets.length, 18);
+  assert.deepEqual(
+    f.room.tickets.slice(15).map((t) => t.createdAt),
+    [60000, 60000, 60000],
+  );
+  assert.equal(f.room.nextArrivalAt, 120000);
   f.game.pause(f.teacher.token);
   const elapsed = f.game.elapsed(f.room),
     due = f.room.tickets[0].dueAt;
   f.advance(3600000);
   assert.equal(f.game.elapsed(f.room), elapsed);
   assert.equal(f.room.tickets[0].dueAt, due);
-  assert.equal(f.room.tickets.length, 16);
+  assert.equal(f.room.tickets.length, 18);
   assert.throws(
     () => f.game.claim(f.students[0].token, f.room.tickets[0].id),
     /pausou/,
   );
   f.game.resume(f.teacher.token);
   f.advance(60000);
-  assert.equal(f.room.tickets.length, 17);
+  assert.equal(f.room.tickets.length, 21);
+  assert.deepEqual(
+    f.room.tickets.slice(18).map((t) => t.createdAt),
+    [120000, 120000, 120000],
+  );
+  f.advance(120000);
+  assert.equal(f.room.tickets.length, 27);
+  assert.deepEqual(
+    f.room.tickets.slice(21).map((t) => t.createdAt),
+    [180000, 180000, 180000, 240000, 240000, 240000],
+  );
 });
 test("posse é exclusiva, dois próprios e ajuda em um terceiro são limites independentes", () => {
   const f = fixture(),
