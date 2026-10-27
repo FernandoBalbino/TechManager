@@ -10,6 +10,16 @@
   --muted: #65779b;
   --line: #e5eef9;
 }
+.lesson-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  color: #3012b5;
+  font-size: 14px;
+  font-weight: 600;
+  text-underline-offset: 5px;
+}
 * {
   box-sizing: border-box;
 }

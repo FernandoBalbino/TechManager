@@ -377,6 +377,9 @@ export function Lobby({
             Desafios em equipe
           </span>
         </div>
+        <a className="lesson-entry" href={base + "slide/"}>
+          Conheça a plataforma · Ver apresentação <CaretRight size={18} />
+        </a>
       </div>
       <section className="lobby-panel">
         <h2>Vamos começar?</h2>

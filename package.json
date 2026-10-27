@@ -8,7 +8,7 @@
     "dev:client": "vite",
     "start": "node server/index.mjs",
     "test": "node --test tests/engine.test.mjs tests/scenarios.test.mjs tests/transport.test.mjs",
-    "build": "vite build && node scripts/prepare-sites-build.mjs",
+    "build": "vite build && node scripts/prepare-sites-build.mjs && node scripts/prepare-routes.mjs",
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "prebuild": "node scripts/prepare-offline.mjs",
